@@ -3,154 +3,151 @@
   margin: 0;
 }
 
-/* 반응형 레이아웃 */
+/* responsive grid system */
 .container {
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
 }
-
 [class^="col-"] {
   padding: 0 5px;
 }
-
 .container {
   padding: 0 15px;
 }
-
 .col-sm-1 {
   width: 25%;
 }
-
 .col-sm-2 {
   width: 50%;
 }
-
 .col-sm-3 {
   width: 75%;
 }
-
 .col-sm-4 {
   width: 100%;
 }
 
+@media screen and (max-width: 744px) {
+  /* global utility */
+  .sm-hidden,
+  .md-only,
+  .lg-only {
+    display: none !important;
+  }
+}
+
+/* tablet ver. */
 @media screen and (min-width: 744px) and (max-width: 1199px) {
+  /* responsive grid system */
   [class^="col-"] {
     padding: 0 10px;
   }
-
   .container {
     padding: 0 40px;
     max-width: 960px;
   }
-
   .col-md-1 {
     width: 8.333%;
   }
-
   .col-md-2 {
     width: 16.666%;
   }
-
   .col-md-3 {
     width: 25%;
   }
-
   .col-md-4 {
     width: 33.333%;
   }
   .col-md-5 {
     width: 41.666%;
   }
-
   .col-md-6 {
     width: 50%;
   }
-
   .col-md-7 {
     width: 58.333%;
   }
-
   .col-md-8 {
     width: 66.666%;
   }
-
   .col-md-9 {
     width: 75%;
   }
-
   .col-md-10 {
     width: 83.333%;
   }
-
   .col-md-11 {
     width: 91.666%;
   }
-
   .col-md-12 {
     width: 100%;
   }
+
+  /* global utility */
+  .md-hidden,
+  .sm-only,
+  .lg-only {
+    display: none !important;
+  }
 }
 
+/* desktop ver */
+
 @media screen and (min-width: 1200px) {
+  /* responsive grid system */
   [class^="col-"] {
     padding: 0 10px;
   }
-
   .container {
     padding: 0;
     max-width: 1140px;
   }
-
   .col-lg-1 {
     width: 95px;
   }
-
   .col-lg-2 {
     width: 190px;
   }
-
   .col-lg-3 {
     width: 285px;
   }
-
   .col-lg-4 {
     width: 380px;
   }
   .col-lg-5 {
     width: 475px;
   }
-
   .col-lg-6 {
     width: 570px;
   }
-
   .col-lg-7 {
     width: 665px;
   }
-
   .col-lg-8 {
     width: 760px;
   }
-
   .col-lg-9 {
     width: 855px;
   }
-
   .col-lg-10 {
     width: 950;
   }
-
   .col-lg-11 {
     width: 1045px;
   }
-
   .col-lg-12 {
     width: 1140px;
+  }
+
+  /* global utility */
+  .lg-hidden,
+  .sm-only,
+  .md-only {
+    display: none !important;
   }
 }
