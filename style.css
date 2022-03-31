@@ -125,10 +125,10 @@ ol {
 }
 
 .summery-section {
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 }
 .summery-section-header {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -206,10 +206,10 @@ ol {
   }
   .banner,
   .summery-section {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
   .summery-section-header {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   .recommend-item {
     margin-right: 16px;
