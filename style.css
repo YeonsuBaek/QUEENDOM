@@ -119,8 +119,9 @@ main {
   margin: 80px 0;
 }
 .banner {
+  position: relative;
   width: 100%;
-  height: calc(100vw / 4);
+  height: calc(100vw / 2.5);
   margin-bottom: 48px;
   overflow: hidden;
   background-color: #f7f8fa; /* img 파일 넣을 시 삭제 */
@@ -130,7 +131,22 @@ main {
   height: auto;
   object-fit: cover;
 }
-
+.banner a {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 36px;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition: background-color 200ms ease-in-out;
+}
+.banner a:hover,
+.banner a:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .summery-section {
   margin-bottom: 64px;
 }
@@ -305,6 +321,14 @@ main {
   main {
     margin: 50px 0;
   }
+  .banner {
+    height: calc(100vw / 2);
+  }
+  .banner a {
+    bottom: 12px;
+    padding: 4px 24px;
+    font-size: 14px;
+  }
   .banner,
   .summery-section {
     margin-bottom: 48px;
@@ -410,6 +434,11 @@ main {
   .recommend-image {
     width: 94px;
     height: 94px;
+  }
+  .banner a {
+    bottom: 20px;
+    padding: 8px 28px;
+    font-size: 16px;
   }
 }
 
