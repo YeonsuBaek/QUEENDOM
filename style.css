@@ -60,7 +60,7 @@ ol {
   width: 100%;
 }
 
-/* top-header */
+/* index */
 .top-header {
   display: flex;
   align-items: center;
@@ -111,6 +111,19 @@ ol {
   color: #d8abfb;
 }
 
+.banner {
+  width: 100%;
+  height: calc(100vw / 4);
+  margin-bottom: 48px;
+  overflow: hidden;
+  background-color: #f7f8fa; /* img 파일 넣을 시 삭제 */
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* mobile ver. */
 @media screen and (max-width: 744px) {
   /* global utility */
@@ -120,7 +133,7 @@ ol {
     display: none !important;
   }
 
-  /* top-header */
+  /* index */
   .header-wrapper {
     height: 50px;
   }
@@ -129,6 +142,9 @@ ol {
   }
   .menu-item a {
     font-size: 14px;
+  }
+  .banner {
+    margin-bottom: 32px;
   }
 }
 
