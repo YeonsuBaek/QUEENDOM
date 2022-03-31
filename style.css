@@ -174,6 +174,7 @@ main {
   justify-content: center;
 }
 .recommend-image {
+  position: relative;
   width: 150px;
   height: 150px;
   margin-bottom: 8px;
@@ -186,9 +187,28 @@ main {
   height: 100%;
   object-fit: cover;
 }
+.recommend-image .play-button {
+  position: absolute;
+  top: 50%;
+  visibility: hidden;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+.play-button img {
+  padding-left: 8px;
+  width: 40%;
+  height: auto;
+}
+.recommend-item:hover .play-button {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .recommend-item h2 {
   font-size: 18px;
-  font-weight: 400;
   color: #0b0326;
 }
 .chart-list {
@@ -298,6 +318,10 @@ main {
   .recommend-image {
     width: 65px;
     height: 65px;
+  }
+  .play-button img {
+    padding-left: 4px;
+    width: 50%;
   }
   .chart-list {
     justify-content: start;
