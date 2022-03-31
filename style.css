@@ -184,13 +184,13 @@ ol {
   font-weight: 400;
   color: #0b0326;
 }
-.album-chart-list {
+.chart-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.album-chart-item {
+.chart-item {
   min-width: 60px;
   max-width: 60px;
   display: flex;
@@ -198,7 +198,7 @@ ol {
   align-items: center;
   justify-content: center;
 }
-.album-chart-item dt {
+.chart-item dt {
   width: 100%;
   font-size: 14px;
   color: #0b0326;
@@ -208,7 +208,7 @@ ol {
   white-space: nowrap;
   order: 2;
 }
-.album-chart-item dd {
+.chart-item dd {
   display: flex;
   align-items: flex-end;
   justify-content: start;
@@ -218,14 +218,14 @@ ol {
   overflow: hidden;
   order: 1;
 }
-.album-chart-item .active-bar {
+.chart-item .active-bar {
   width: 100%;
   border-radius: 4px 4px 0 0;
   background-color: #9303a6;
   animation-name: chart-slide-bar;
   animation-duration: 2000ms;
 }
-.album-chart-item:first-child .active-bar {
+.chart-item:first-child .active-bar {
   background-color: #d504d9;
 }
 
@@ -262,23 +262,23 @@ ol {
     width: 65px;
     height: 65px;
   }
-  .album-chart-list {
+  .chart-list {
     justify-content: start;
     width: 100%;
     overflow-x: scroll;
   }
-  .album-chart-list::-webkit-scrollbar {
+  .chart-list::-webkit-scrollbar {
     display: none;
   }
-  .album-chart-item {
+  .chart-item {
     min-width: 48px;
     max-width: 48px;
     margin-right: 10px;
   }
-  .album-chart-item dt {
+  .chart-item dt {
     font-size: 12px;
   }
-  .album-chart-item dd {
+  .chart-item dd {
     width: 16px;
     height: 100px;
     margin-bottom: 4px;
