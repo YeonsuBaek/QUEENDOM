@@ -271,30 +271,30 @@ main {
 .chart-item:first-child .active-bar {
   background-color: #d504d9;
 }
-.music-video-item {
+.video-item {
   margin-bottom: 24px;
 }
-.music-video-item iframe {
+.video-item iframe {
   width: 100%;
   height: 200px;
   margin-bottom: 8px;
 }
-.music-video-item a {
+.video-item a {
   display: block;
   font-size: 13px;
   color: #8c8d96;
 }
-.music-video-item:hover a,
-.music-video-item:active a {
+.video-item:hover a,
+.video-item:active a {
   color: #b2b3b9;
 }
-.music-video-item h2 {
+.video-item h2 {
   font-size: 16px;
   font-weight: 400;
   color: #0b0326;
 }
-.music-video-item:hover h2,
-.music-video-item:active h2 {
+.video-item:hover h2,
+.video-item:active h2 {
   color: #9303a6;
 }
 
@@ -368,10 +368,10 @@ main {
     height: 100px;
     margin-bottom: 4px;
   }
-  .music-video-item a {
+  .video-item a {
     font-size: 11px;
   }
-  .music-video-item h2 {
+  .video-item h2 {
     font-size: 14px;
   }
 }
