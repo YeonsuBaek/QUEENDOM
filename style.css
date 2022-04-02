@@ -392,6 +392,13 @@ main {
 .dark .video-item a:active h2 {
   color: #f44ff7;
 }
+.dark .group-list {
+  height: calc(100vh - 48px);
+}
+.dark .group-item:hover h1,
+.dark .group-item:active h1 {
+  color: #f44ff7;
+}
 
 /* mobile ver. */
 @media screen and (max-width: 744px) {
@@ -477,6 +484,11 @@ main {
   }
   .group-image {
     margin-bottom: 4px;
+  }
+
+  /* mobile > dark mode */
+  .dark .group-list {
+    height: 100%;
   }
 }
 
