@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   color: #0b0326;
-  background-color: #fff;
 }
 body {
   position: relative;
@@ -71,6 +70,7 @@ main {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #e0e2e7;
+  background-color: #fff;
   z-index: 50;
 }
 .header-wrapper {
@@ -330,10 +330,13 @@ main {
 /* dark mode */
 .dark * {
   color: #fff;
+}
+.dark main {
   background-color: #0b0326;
 }
 .dark .top-header {
   border-bottom: 1px solid #422f7d;
+  background-color: #0b0326;
 }
 .dark .menu-item:not(:last-child) a:hover,
 .dark .menu-item:not(:last-child) a:active {
