@@ -314,16 +314,16 @@ main {
   font-size: 13px;
   color: #8c8d96;
 }
-.video-item:hover a,
-.video-item:active a {
+.video-item a:hover,
+.video-item a:active {
   color: #b2b3b9;
 }
 .video-item h2 {
   font-size: 16px;
   font-weight: 400;
 }
-.video-item:hover h2,
-.video-item:active h2 {
+.video-item a:hover h2,
+.video-item a:hover h2 {
   color: #9303a6;
 }
 
@@ -354,8 +354,8 @@ main {
 .dark .chart-item:first-child .active-bar {
   background-color: #f805fc;
 }
-.dark .video-item:hover h2,
-.dark .video-item:active h2 {
+.dark .video-item a:hover h2,
+.dark .video-item a:active h2 {
   color: #f44ff7;
 }
 
@@ -369,7 +369,7 @@ main {
   }
 
   main {
-    margin: 50px 0;
+    padding: 50px 0;
   }
 
   /* mobile > index */
