@@ -229,17 +229,17 @@ main {
 }
 .chart-list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
-
 .chart-item {
+  position: relative;
   min-width: 60px;
   max-width: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .chart-item dt {
   width: 100%;
@@ -254,15 +254,17 @@ main {
 .chart-item dd {
   display: flex;
   align-items: flex-end;
-  justify-content: start;
-  width: 24px;
-  height: 150px;
+  justify-content: center;
+  width: 100%;
   margin-bottom: 8px;
   overflow: hidden;
   order: 1;
 }
 .chart-item .active-bar {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
   border-radius: 4px 4px 0 0;
   background-color: #9303a6;
   animation-name: chart-slide-bar;
@@ -271,6 +273,42 @@ main {
 .chart-item:first-child .active-bar {
   background-color: #d504d9;
 }
+.chart-item .chart-detail {
+  position: relative;
+  position: absolute;
+  top: -40px;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: rgba(140, 141, 150, 0.7);
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  transition: transform 200ms ease-in-out, visibility 200ms ease-in-out,
+    opacity 200ms ease-in-out;
+}
+.chart-item:hover .chart-detail {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, -5px, 0);
+}
+.chart-detail::before {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(140, 141, 150, 0.7);
+  border-bottom: 4px solid transparent;
+  content: "";
+}
+
 .video-item {
   margin-bottom: 24px;
 }
@@ -347,26 +385,18 @@ main {
     padding-left: 4px;
     width: 50%;
   }
-  .chart-list {
-    justify-content: start;
-    width: 100%;
-    overflow-x: scroll;
-  }
-  .chart-list::-webkit-scrollbar {
-    display: none;
-  }
   .chart-item {
     min-width: 48px;
     max-width: 48px;
-    margin-right: 10px;
   }
   .chart-item dt {
     font-size: 12px;
   }
   .chart-item dd {
-    width: 16px;
-    height: 100px;
     margin-bottom: 4px;
+  }
+  .chart-detail {
+    font-size: 12px;
   }
   .video-item a {
     font-size: 11px;
