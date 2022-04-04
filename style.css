@@ -5,6 +5,9 @@
   box-sizing: border-box;
   color: #0b0326;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
@@ -363,14 +366,25 @@ main {
 
 /* group-introduction */
 .group-introduction {
+  position: absolute;
   position: relative;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 0;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.group-introduction::-webkit-scrollbar {
+  display: none;
 }
 .group-introduction .banner {
   margin-bottom: 0;
 }
 .lnb {
   position: sticky;
-  top: 80px;
+  top: 0px;
   border-bottom: 1px solid #e0e2e7;
   background-color: #fff;
   z-index: 100;
@@ -395,13 +409,11 @@ main {
 :is(.lnb-item:hover, .lnb-item:active) a {
   color: #9303a6;
 }
-.group-profile {
-  margin-top: 36px;
-}
 .group-profile,
 .group-members,
-.group-albums {
-  margin-bottom: 64px;
+.group-albums,
+.group-videos {
+  padding-top: 64px;
 }
 .group-title {
   margin-bottom: 12px;
@@ -790,21 +802,25 @@ main {
   }
 
   /* mobile > group-introduction */
+  .group-introduction {
+    top: 50px;
+    height: calc(100vh - 50px);
+  }
   .lnb {
-    top: 49px;
+    top: -1px;
   }
   .lnb-item a {
     height: 40px;
     font-size: 16px;
   }
   .group-introduction {
-    margin-top: 24px;
     margin-bottom: 48px;
   }
   .group-profile,
   .group-members,
-  .group-albums {
-    margin-bottom: 48px;
+  .group-albums,
+  .group-videos {
+    padding-top: 48px;
   }
   .group-summery {
     margin-bottom: 24px;
