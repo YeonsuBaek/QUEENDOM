@@ -658,6 +658,50 @@ main {
 .dark .group-item:active h1 {
   color: #f44ff7;
 }
+.dark .lnb {
+  background-color: #0b0326;
+  border-bottom: 1px solid #422f7d;
+}
+.dark :is(.lnb-item:hover, .lnb-item:active) a {
+  color: #f44ff7;
+}
+.dark .like-button .view {
+  color: #fff;
+}
+.dark .like-button:hover .view {
+  color: #f805fc;
+}
+
+.dark .like-button:active .effect.n01 {
+  color: #f805fc;
+}
+.dark .like-button:active .effect.n02 {
+  color: #f805fc;
+}
+.dark .like-button:active .effect.n03 {
+  color: #f805fc;
+}
+.dark .like-button:active .effect.n04 {
+  color: #f805fc;
+}
+.dark .group-profile .group-summery {
+  color: #f7f8fa;
+}
+.dark .group-detail-item:not(:last-child) {
+  border-bottom: 1px solid #422f7d;
+}
+.dark .group-detail-item dt {
+  color: #e0e2e7;
+}
+.dark .group-detail-item :is(dd, time) {
+  color: #f7f8fa;
+}
+.dark .member-detail strong {
+  color: #f7f8fa;
+}
+.dark .album-detail {
+  color: #f7f8fa;
+}
 
 /* mobile ver. */
 @media screen and (max-width: 744px) {
