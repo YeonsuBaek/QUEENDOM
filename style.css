@@ -480,20 +480,81 @@ main {
 .sns-item:not(:last-child) {
   margin-right: 8px;
 }
-.sns-item a {
+:is(.sns-item, .member-image) a {
   display: block;
   width: 36px;
   height: 36px;
   overflow: hidden;
 }
-.sns-item a img {
+:is(.sns-item, .member-image) a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: filter 200ms ease-in-out;
 }
-:is(.sns-item a:hover, .sns-item a:active) img {
+:is(:is(.sns-item, .member-image) a:hover, a:active) img {
   filter: brightness(0.7);
+}
+.group-members {
+  margin-bottom: 64px;
+}
+.member-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow-x: scroll;
+}
+.member-list::-webkit-scrollbar {
+  display: none;
+}
+.member-item {
+  margin-right: 20px;
+}
+.member-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member-image h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+:is(.member-image:hover, .member-image:active) h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(140, 141, 150, 0.7);
+  visibility: visible;
+  opacity: 1;
+}
+.member-image a {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.member-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+}
+.member-detail strong {
+  font-weight: 400;
+  color: #3f4150;
 }
 
 /* dark mode */
@@ -641,9 +702,34 @@ main {
     padding: 8px 0;
     margin: 0 12px;
   }
-  .sns-item a {
+  :is(.sns-item, .member-image) a {
     width: 24px;
     height: 24px;
+  }
+  .group-members {
+    margin-bottom: 48px;
+  }
+  .member-item {
+    margin-right: 10px;
+  }
+  .member-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 8px;
+  }
+  .member-image h1 {
+    font-size: 16px;
+  }
+  .member-image a {
+    bottom: 8px;
+    right: 8px;
+  }
+  .member-detail strong,
+  .member-detail time {
+    font-size: 12px;
+  }
+  .member-detail h1 {
+    font-size: 16px;
   }
 
   /* mobile > dark mode */
