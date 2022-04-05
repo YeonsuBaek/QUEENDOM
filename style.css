@@ -569,6 +569,9 @@ main {
   font-weight: 400;
   color: #3f4150;
 }
+.album-item:not(:last-child) {
+  margin-bottom: 32px;
+}
 .album-title {
   position: relative;
   margin-bottom: 32px;
@@ -589,6 +592,9 @@ main {
   right: -25%;
   transform: translate(25%, -50%);
   font-size: 80px;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgb(0 0 0 / 40%);
+  text-align: center;
 }
 .album-play-content {
   height: 100%;
@@ -856,6 +862,9 @@ main {
   .member-detail h1 {
     font-size: 16px;
   }
+  .album-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
   .album-title {
     position: static;
     display: flex;
@@ -868,6 +877,8 @@ main {
     position: static;
     transform: translate(0, 0);
     font-size: 48px;
+    color: #0b0326;
+    text-shadow: 0px 0px;
   }
   .album-play-content {
     margin-bottom: 24px;
@@ -953,6 +964,9 @@ main {
   .sns-item a {
     width: 30px;
     height: 30px;
+  }
+  .album-title h1 {
+    font-size: 64px;
   }
 }
 
