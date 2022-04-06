@@ -116,6 +116,35 @@ main {
   color: #d8abfb;
 }
 
+.kor {
+  color: #0b0326;
+}
+.eng {
+  display: none;
+  color: #8c8d96;
+}
+.lang-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-style: 13px;
+  color: #fff;
+  background-color: #0b0326;
+  opacity: 0.4;
+  border-radius: 50%;
+}
+.lang-button:hover {
+  opacity: 0.8;
+}
+.lang-button:hover + .kor {
+  display: none;
+}
+.lang-button:hover ~ .eng {
+  display: block;
+}
+
 /* index */
 .banner {
   position: relative;
@@ -469,7 +498,7 @@ main {
   opacity: 0.7;
 }
 .group-profile .group-summery {
-  color: #3f4150;
+  position: relative;
 }
 .group-detail-item {
   padding: 16px 0;
@@ -635,7 +664,7 @@ main {
   object-fit: cover;
 }
 .album-detail {
-  color: #3f4150;
+  position: relative;
 }
 
 /* dark mode */
@@ -644,6 +673,16 @@ main {
 }
 .dark main {
   background-color: #0b0326;
+}
+.dark .kor {
+  color: #f7f8fa;
+}
+.dark .eng {
+  color: #e0e2e7;
+}
+.dark .lang-button {
+  color: #0b0326;
+  background-color: #fff;
 }
 .dark .top-header {
   border-bottom: 1px solid #422f7d;
@@ -702,9 +741,6 @@ main {
 .dark .like-button:active .effect.n04 {
   color: #f805fc;
 }
-.dark .group-profile .group-summery {
-  color: #f7f8fa;
-}
 .dark .group-detail-item:not(:last-child) {
   border-bottom: 1px solid #422f7d;
 }
@@ -715,9 +751,6 @@ main {
   color: #f7f8fa;
 }
 .dark .member-detail strong {
-  color: #f7f8fa;
-}
-.dark .album-detail {
   color: #f7f8fa;
 }
 
@@ -736,6 +769,21 @@ main {
   .top-header,
   .header-wrapper {
     height: 50px;
+  }
+
+  .lang-button {
+    width: 36px;
+    height: 36px;
+    font-style: 12px;
+  }
+  .lang-button:active {
+    opacity: 0.8;
+  }
+  .lang-button:active + .kor {
+    display: none;
+  }
+  .lang-button:active ~ .eng {
+    display: block;
   }
 
   /* mobile > index */
@@ -942,6 +990,15 @@ main {
   .sm-only,
   .lg-only {
     display: none !important;
+  }
+  .lang-button:active {
+    opacity: 0.8;
+  }
+  .lang-button:active + .kor {
+    display: none;
+  }
+  .lang-button:active ~ .eng {
+    display: block;
   }
 
   /* tablet > index */
