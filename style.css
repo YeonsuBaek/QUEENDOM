@@ -178,20 +178,20 @@ main {
 .summery-section {
   margin-bottom: 64px;
 }
-.summery-section-header {
+.contents-header {
   margin-bottom: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.summery-section-header h1 {
+.contents-header h1 {
   font-size: 18px;
 }
-.summery-section-header a {
+.contents-header a {
   color: #9303a6;
 }
-.summery-section-header a:hover,
-.summery-section-header a:active {
+.contents-header a:hover,
+.contents-header a:active {
   color: #602169;
 }
 .recommed-list {
@@ -360,37 +360,43 @@ main {
   color: #9303a6;
 }
 
-/* group */
-.group-list {
+/* menu - group, music */
+.contents-list {
   margin-top: 48px;
 }
-.group-item {
+.contents-item {
   display: block;
   margin-bottom: 24px;
 }
-.group-item h1 {
+.contents-item h1 {
   font-size: 18px;
   text-align: center;
 }
-.group-item:hover h1,
-.group-item:active h1 {
+.contents-item:hover h1,
+.contents-item:active h1 {
   color: #9303a6;
 }
-.group-item:hover img {
+.contents-item:hover img {
   transform: scale(1.1);
 }
-.group-image {
+.contents-image {
   width: 100%;
   margin-bottom: 8px;
-  aspect-ratio: 4/3;
+
   overflow: hidden;
 }
-.group-image img {
+.contents-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
+}
+.menu-group .contents-image {
+  aspect-ratio: 4/3;
+}
+.menu-music .contents-image {
+  aspect-ratio: 1/1;
 }
 
 /* group-introduction */
@@ -692,10 +698,10 @@ main {
 .dark .menu-item:not(:last-child) a:active {
   color: #f44ff7;
 }
-.dark .summery-section-header a {
+.dark .contents-header a {
   color: #d504d9;
 }
-.dark .summery-section-header a:hover {
+.dark .contents-header a:hover {
   color: #f805fc;
 }
 .dark .chart-item .active-bar {
@@ -708,11 +714,11 @@ main {
 .dark .video-item a:active h2 {
   color: #f44ff7;
 }
-.dark .group-list {
+.dark .contents-list {
   height: calc(100vh - 48px);
 }
-.dark .group-item:hover h1,
-.dark .group-item:active h1 {
+.dark .contents-item:hover h1,
+.dark .contents-item:active h1 {
   color: #f44ff7;
 }
 .dark .lnb {
@@ -805,7 +811,7 @@ main {
   .summery-section {
     margin-bottom: 48px;
   }
-  .summery-section-header {
+  .contents-header {
     margin-bottom: 24px;
   }
   .recommend-item {
@@ -840,18 +846,18 @@ main {
   }
 
   /* mobile > group */
-  .group-list {
+  .contents-list {
     margin-top: 32px;
   }
-  .group-item {
+  .contents-item {
     margin-bottom: 16px;
   }
-  .group-item h1 {
+  .contents-item h1 {
     margin-left: 4px;
     font-size: 16px;
     text-align: left;
   }
-  .group-image {
+  .contents-image {
     margin-bottom: 4px;
   }
 
@@ -933,7 +939,7 @@ main {
   }
 
   /* mobile > dark mode */
-  .dark .group-list {
+  .dark .contents-list {
     height: 100%;
   }
 }
