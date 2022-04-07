@@ -673,6 +673,94 @@ main {
   position: relative;
 }
 
+/* playlist */
+.playlist .contents-title {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+.playlist-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.playlist-item {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.playlist-image {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.playlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1);
+  transition: filter 200ms ease-in-out;
+}
+:is(.playlist-info:hover, .playlist-info:active) .playlist-image img {
+  filter: brightness(0.7);
+}
+.playlist-image .ic-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 32px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+:is(.playlist-info:hover, .playlist-info:active) .ic-play {
+  visibility: visible;
+  opacity: 1;
+}
+.playlist-info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.playlist-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.playlist-detail h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+:is(.playlist-info:hover, .playlist-info:active) .playlist-detail h2 {
+  color: #9303a6;
+}
+.playlist-detail strong {
+  color: #8c8d96;
+  font-size: 16px;
+  font-weight: 400;
+}
+:is(.playlist-info:hover, .playlist-info:active) .playlist-detail strong {
+  color: #b2b3b9;
+}
+.like-button i {
+  color: #b2b3b9;
+  font-size: 32px;
+  transition: color 300ms ease-in-out;
+}
+.like-button:hover i {
+  color: #9303a6;
+}
+.like-button:active i {
+  color: #f805fc;
+}
+
 /* dark mode */
 .dark * {
   color: #fff;
@@ -936,6 +1024,32 @@ main {
   }
   .album-play-content {
     margin-bottom: 24px;
+  }
+
+  /* mobile > playlist */
+  .playlist .contents-title {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  .playlist-item {
+    margin-bottom: 8px;
+  }
+  .playlist-image {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+  }
+  .playlist-image .ic-play {
+    font-size: 20px;
+  }
+  .playlist-detail h2 {
+    font-size: 16px;
+  }
+  .playlist-detail strong {
+    font-size: 14px;
+  }
+  .like-button i {
+    font-size: 24px;
   }
 
   /* mobile > dark mode */
