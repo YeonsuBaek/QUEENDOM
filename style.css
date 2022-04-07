@@ -714,12 +714,12 @@ main {
 .dark .video-item a:active h2 {
   color: #f44ff7;
 }
-.dark .contents-list {
-  height: calc(100vh - 48px);
-}
 .dark .contents-item:hover h1,
 .dark .contents-item:active h1 {
   color: #f44ff7;
+}
+.dark .menu-group {
+  height: calc(100vh);
 }
 .dark .lnb {
   background-color: #0b0326;
@@ -939,7 +939,7 @@ main {
   }
 
   /* mobile > dark mode */
-  .dark .contents-list {
+  .dark .menu-group {
     height: 100%;
   }
 }
