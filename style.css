@@ -1115,6 +1115,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-play:before {
+  content: "\e900";
+}
 .ic-heart-filled:before {
   content: "\e916";
 }
