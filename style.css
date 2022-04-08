@@ -749,15 +749,15 @@ main {
 :is(.playlist-info:hover, .playlist-info:active) .playlist-detail strong {
   color: #b2b3b9;
 }
-.like-button i {
+.playlist .like-button i {
   color: #b2b3b9;
   font-size: 32px;
   transition: color 300ms ease-in-out;
 }
-.like-button:hover i {
+.playlist .like-button:hover i {
   color: #9303a6;
 }
-.like-button:active i {
+.playlist .like-button:active i {
   color: #f805fc;
 }
 
@@ -806,7 +806,7 @@ main {
 .dark .contents-item:active h1 {
   color: #f44ff7;
 }
-.dark .menu-group {
+.dark :is(.menu-group, .playlist) {
   height: calc(100vh);
 }
 .dark .lnb {
@@ -846,6 +846,12 @@ main {
 }
 .dark .member-detail strong {
   color: #f7f8fa;
+}
+.dark .playlist-item:hover h2 {
+  color: #f44ff7;
+}
+.dark .playlist-item:hover strong {
+  color: #b2b3b9;
 }
 
 /* mobile ver. */
@@ -1048,7 +1054,7 @@ main {
   .playlist-detail strong {
     font-size: 14px;
   }
-  .like-button i {
+  .playlist-item .like-button i {
     font-size: 24px;
   }
 
