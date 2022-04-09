@@ -381,8 +381,7 @@ main {
   font-size: 18px;
   text-align: center;
 }
-.menu-item:hover h1,
-.menu-item:active h1 {
+.menu-item:is(:hover, :active) h1 {
   color: #9303a6;
 }
 .menu-item:hover img {
@@ -391,7 +390,6 @@ main {
 .menu-image {
   width: 100%;
   margin-bottom: 8px;
-
   overflow: hidden;
 }
 .menu-image img {
@@ -401,10 +399,10 @@ main {
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
-.menu-group .contents-image {
+.menu-group .menu-image {
   aspect-ratio: 4/3;
 }
-.menu-music .contents-image {
+.menu-music .menu-image {
   aspect-ratio: 1/1;
 }
 
@@ -796,8 +794,7 @@ main {
 .dark .video-item a:active h2 {
   color: #f44ff7;
 }
-.dark .contents-item:hover h1,
-.dark .contents-item:active h1 {
+.dark .menu-item:is(:hover, :active) h1 {
   color: #f44ff7;
 }
 .dark :is(.menu-group, .playlist) {
@@ -933,15 +930,15 @@ main {
   }
 
   /* mobile > group */
-  .contents-list {
+  .menu-list {
     margin-top: 32px;
   }
-  .contents-item {
+  .menu-item {
     margin-bottom: 16px;
   }
-  .contents-item h1 {
+  .menu-item h1 {
     margin-left: 4px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
   .contents-image {
