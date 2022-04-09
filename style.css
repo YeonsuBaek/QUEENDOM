@@ -243,27 +243,25 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: none;
+  filter: brightness(1);
+  transition: filter 200ms ease-in-out;
 }
-.recommend-image .play-button {
+.recommend-image .play-button i {
   position: absolute;
   top: 50%;
   visibility: hidden;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: background-color 200ms ease-in-out, visibility 200ms ease-in-out;
+  font-size: 40px;
+  color: transparent;
+  transition: color 200ms ease-in-out, visibility 200ms ease-in-out;
 }
-.play-button img {
-  padding-left: 8px;
-  width: 40%;
-  height: auto;
+.recommend-item:hover .recommend-image img {
+  filter: brightness(0.7);
 }
-.recommend-item:hover .play-button {
+.recommend-item:hover .play-button i {
   visibility: visible;
-  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 .recommend-item h2 {
   font-size: 18px;
@@ -847,10 +845,10 @@ main {
 .dark .member-detail strong {
   color: #f7f8fa;
 }
-.dark .playlist-item:hover h2 {
+.dark .playlist-detail:hover h2 {
   color: #f44ff7;
 }
-.dark .playlist-item:hover strong {
+.dark .playlist-detail:hover strong {
   color: #b2b3b9;
 }
 
@@ -915,9 +913,8 @@ main {
     width: 65px;
     height: 65px;
   }
-  .play-button img {
-    padding-left: 4px;
-    width: 50%;
+  .recommend-image .play-button i {
+    font-size: 24px;
   }
   .chart-item {
     min-width: 48px;
@@ -1131,6 +1128,9 @@ main {
   .recommend-image {
     width: 94px;
     height: 94px;
+  }
+  .recommend-image .play-button i {
+    font-size: 32px;
   }
   .banner a {
     bottom: 20px;
