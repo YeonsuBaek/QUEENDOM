@@ -572,8 +572,13 @@ main {
   align-items: center;
 }
 .member-detail strong {
+  width: 200px;
   font-weight: 400;
   color: #3f4150;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
 }
 .album-item:not(:last-child) {
   margin-bottom: 32px;
@@ -966,6 +971,9 @@ main {
   .member-detail strong,
   .member-detail time {
     font-size: 12px;
+  }
+  .member-detail strong {
+    width: 120px;
   }
   .member-detail h1 {
     font-size: 16px;
