@@ -143,6 +143,9 @@ main {
   position: relative;
   margin-top: 4px;
 }
+.contents-title .like-button i {
+  color: #fff;
+}
 .video-item {
   margin-bottom: 24px;
 }
@@ -195,6 +198,17 @@ main {
 }
 .lang-button:hover ~ .eng {
   display: block;
+}
+.like-button i {
+  color: #b2b3b9;
+  font-size: 32px;
+  transition: color 300ms ease-in-out;
+}
+.like-button:hover i {
+  color: #9303a6;
+}
+.like-button:active i {
+  color: #f805fc;
 }
 
 /* index */
@@ -259,7 +273,6 @@ main {
   margin-bottom: 8px;
   overflow: hidden;
   border-radius: 50%;
-  background-color: #f7f8fa; /* img 파일 넣을 시 삭제 */
 }
 .recommend-image img {
   width: 100%;
@@ -457,44 +470,8 @@ main {
 .group-videos {
   padding-top: 64px;
 }
-.like-button i {
+.contents-title .like-button i {
   font-size: 24px;
-  transition: color 200ms ease-in-out;
-}
-.like-button .view {
-  color: #0b0326;
-}
-.like-button:hover .view {
-  color: #d504d9;
-}
-.like-button .effect {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: transparent;
-  opacity: 0;
-  transition: bottom 200ms ease-in-out, color 200ms ease-in-out,
-    opac 200ms ease-in-out;
-}
-.like-button:active .effect.n01 {
-  bottom: 40px;
-  color: #d504d9;
-  opacity: 0.1;
-}
-.like-button:active .effect.n02 {
-  bottom: 30px;
-  color: #d504d9;
-  opacity: 0.3;
-}
-.like-button:active .effect.n03 {
-  bottom: 20px;
-  color: #d504d9;
-  opacity: 0.5;
-}
-.like-button:active .effect.n04 {
-  bottom: 10px;
-  color: #d504d9;
-  opacity: 0.7;
 }
 .group-profile .group-summery {
   position: relative;
@@ -741,17 +718,6 @@ main {
 }
 :is(.playlist-info:hover, .playlist-info:active) .playlist-detail strong {
   color: #b2b3b9;
-}
-.playlist .like-button i {
-  color: #b2b3b9;
-  font-size: 32px;
-  transition: color 300ms ease-in-out;
-}
-.playlist .like-button:hover i {
-  color: #9303a6;
-}
-.playlist .like-button:active i {
-  color: #f805fc;
 }
 
 /* dark mode */
