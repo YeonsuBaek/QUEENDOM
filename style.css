@@ -869,6 +869,9 @@ main {
   .recommend-item {
     margin-right: 16px;
   }
+  .recommend-item h2 {
+    font-size: 14px;
+  }
   .recommend-image {
     width: 65px;
     height: 65px;
