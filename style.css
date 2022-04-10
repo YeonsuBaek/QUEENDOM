@@ -1110,6 +1110,9 @@ main {
   }
 
   /* tablet > group-introduction */
+  .lnb {
+    top: -1px;
+  }
   .group-detail-item {
     font-size: 14px;
     padding: 12px 0;
