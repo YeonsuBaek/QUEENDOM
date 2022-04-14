@@ -781,6 +781,10 @@ main {
 .dark .video-item a:active h2 {
   color: #f44ff7;
 }
+.dark .search-bar {
+  border: 1px solid #e0e2e7;
+  background-color: transparent;
+}
 .dark .menu-item:is(:hover, :active) h1 {
   color: #f44ff7;
 }
@@ -800,7 +804,6 @@ main {
 .dark .like-button:hover .view {
   color: #f805fc;
 }
-
 .dark .like-button:active .effect.n01 {
   color: #f805fc;
 }
