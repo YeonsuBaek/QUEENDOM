@@ -920,8 +920,13 @@ main {
   }
 
   /* mobile > group */
-  .menu-list {
-    margin-top: 32px;
+  .search-bar {
+    padding: 8px 12px;
+    margin: 16px 0;
+  }
+  .search-bar,
+  .search-bar::placeholder {
+    font-size: 12px;
   }
   .menu-item {
     margin-bottom: 16px;
